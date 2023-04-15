@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagination</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+
+  <section class="main-container">
+
+    <!-- Navbar -->
+    <header class="main-header">
+      <div class="logo-container">
+        <img src="img/guineapig-logo.png" alt="Logo">
+        <h1>Pets</h1>
+      </div>
+      <span class="material-symbols-outlined open-menu" id="open-menu" onclick="openMenu()">
+        menu
+      </span>
+      <div class="navbar">
+        <ul>
+          <li><a href="#home" onclick="goHome()">Home</a></li>
+          <li><a href="#whats-gp" onclick="aboutMe()">What is Guinea Pig?</a></li>
+          <li><a href="#contact-us" onclick="goContact()">Contact us</a></li>
+        </ul>
+      </div>
+
+      <span class="material-symbols-outlined close-menu" id="close-menu" ondblclick="closeMenu()">
+        close
+      </span>
+    </header>
+
+    <!-- Pagination -->
+    <section class="pagination-container" id="home">
+      <div class="pagination-1 pet-image">
+        <img src="img/californian-gp.jpg" alt="Californian Guinea Pig">
+
+        <div class="pet-description">
+          <h1>Californian</h1>
+          <p>California guinea pigs are very similar to Himalayan guinea pigs.</p>
+        </div>
+      </div>
+      <div class="pagination-2 pet-image">
+        <img src="img/sheltie-gp.webp" alt="Sheltie Guinea Pig">
+
+        <div class="pet-description">
+          <h1>Sheltie or Silkie</h1>
+          <p>The Silkie Guinea Pig breed is rather a novel Guinea pig variety, which was developed during the 1970s.</p>
+        </div>
+      </div>
+      <div class="pagination-3 pet-image">
+        <img src="img/peruvian-gp.jpeg" alt="Peruvian Guinea Pig">
+
+        <div class="pet-description">
+          <h1>Peruvian</h1>
+          <p>Peruvian guinea pigs are relatively easy to tell apart from other breeds.</p>
+        </div>
+      </div>
+      <div class="btn">
+        <button id="previous" onclick="backSlide()">
+          <span class="material-symbols-outlined">
+            arrow_back
+          </span>
+        </button>
+        <button id="next" onclick="forwardSlide()">
+          <span class="material-symbols-outlined">
+            arrow_forward
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- What is guinea pig -->
+    <section class="gp-container" id="whats-gp">
+      <h1>What is Guinea Pig</h1>
+      <p>The guinea pig or domestic guinea pig (Cavia porcellus), also known as the cavy or domestic cavy (/ˈkeɪvi/), is
+        a species of rodent belonging to the genus Cavia in the family Caviidae. Breeders tend to use the word cavy to
+        describe the animal, while in scientific and laboratory contexts, it is far more commonly referred to by the
+        common name guinea pig.[1] Despite their common name, guinea pigs are not native to Guinea, nor are they closely
+        related biologically to pigs, and the origin of the name is still unclear. They originated in the Andes of South
+        America. Studies based on biochemistry and hybridization suggest they are domesticated animals that do not exist
+        naturally in the wild, descendants of a closely related cavy species such as C. tschudii.[2][3] They were
+        originally domesticated as livestock for a source of meat, and are still consumed in some parts of the world.
+        <br><br>
+        In Western society, the guinea pig has enjoyed widespread popularity as a pet since its introduction to Europe
+        and North America by European traders in the 16th century. Their docile nature, friendly responsiveness to
+        handling and feeding, and the relative ease of caring for them have continued to make guinea pigs a popular
+        choice of household pet. Organizations devoted to the competitive breeding of guinea pigs have been formed
+        worldwide. Many specialized breeds, with varying coat colors and textures, are selected by breeders.
+        <br><br>
+        Livestock breeds of the guinea pig play an important role in folk culture for many indigenous Andean peoples,
+        especially as a food source.[4] The animals are also used in folk medicine and in community religious
+        ceremonies.[5] They are raised for their meat and are a culinary staple in the Andes Mountains, where they are
+        known as cuy. In the 1960s a modern breeding program was started in Peru that resulted in large breeds known as
+        cuy mejorados (improved cuy). Marketers tried to increase consumption of the animal outside South America.[6]
+        <br><br>
+        Biological experimentation on domestic guinea pigs has been carried out since the 17th century. The animals were
+        used so frequently as model organisms in the 19th and 20th centuries that the epithet guinea pig came into use
+        to describe a human test subject. Since that time, they have been largely replaced by other rodents, such as
+        mice and rats. However, they are still used in research, primarily as models to study such human medical
+        conditions as juvenile diabetes, tuberculosis, scurvy (like humans, they require dietary intake of vitamin C),
+        and pregnancy complications.</p>
+
+      <div class="breed-type">
+        <div class="breed">
+          <div class="logo">
+            <img src="img/sheltie-gp.webp">
+          </div>
+          <div class="breed-description">
+            <h3>Sheltie</h3>
+            <p>The Silkie Guinea Pig breed is rather a novel Guinea pig variety, which was developed during the 1970s.
+              It was created by cross breeding the Self Black Guinea Pig and the Peruvian Guinea Pig. Silkies are also
+              commonly known as Shelties.</p>
+          </div>
+        </div>
+
+        <div class="breed">
+          <div class="logo">
+            <img src="img/peruvian-gp.jpeg">
+          </div>
+          <div class="breed-description">
+            <h3>Peruvian</h3>
+            <p>Peruvian guinea pigs are relatively easy to tell apart from other breeds. The middle parting and hair
+              swirls (also called rosettes) on the hips and head are particularly striking. Another distinguishing
+              feature is the resulting fringe, which gives these guinea pigs their cheeky appearance.</p>
+          </div>
+        </div>
+
+        <div class="breed">
+          <div class="logo">
+            <img src="img/californian-gp.jpg">
+          </div>
+          <div class="breed-description">
+            <h3>Californian</h3>
+            <p>California guinea pigs are very similar to Himalayan guinea pigs. The same smooth-haired, with dark
+              pigment. , but with one significant difference – they have dark eyes, while the Himalayan pigs have red.
+              Unlike Himalayan guinea pigs, California points can be not only black or chocolate, but also purple and
+              beige.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </section>
+
+  <footer>
+    <div class="contact-us" id="contact-us">
+      <div class="contact-container">
+        <h3>Contact-Us</h3>
+        <ul>
+          <li><span>Cellphone Number: </span>09657447565</li>
+          <li><span>Email Address: </span>sainggarhogenn@gmail.com</li>
+          <li><span>Facebook: </span>Rhogenn Saingga</li>
+        </ul>
+      </div>
+
+      <div class="breed-type-footer">
+        <h3>The 3 Breeds of gp</h3>
+        <ul>
+          <li>Sheltie or Silkie</li>
+          <li>Californian</li>
+          <li>Peruvian</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">This Website made by Manachan. 4/12/2023</div>
+  </footer>
+
+  <script src="pagination.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.main-container {
+  width: 100%;
+  background: #faf0f0;
+  overflow: hidden;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ea8737;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 15;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.logo-container img {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  margin-left: 70px;
+}
+
+.logo-container h1 {
+  font-size: 2rem;
+}
+
+.main-header ul {
+  list-style: none;
+  margin-right: 70px;
+}
+
+.main-header ul li {
+  padding: 5px;
+  margin: 0 10px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-header ul li a {
+  color: #3d2919;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.main-header ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #696868;
+  transition: width .15s;
+}
+
+.main-header ul li:hover::after {
+  width: 100%;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+
+.pet-image {
+  flex-basis: 100%;
+  height: 100vh;
+}
+
+.pet-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.pagination-2,
+.pagination-3 {
+  display: none;
+}
+
+.pet-description {
+  max-width: 700px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 200px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.pet-description p {
+  font-weight: 600;
+  margin-top: 10px;
+  word-spacing: .2rem;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btn button {
+  margin: 0 50px;
+  background-color: transparent;
+  color: #ea8737;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* What is gp */
+.gp-container {
+  margin-top: 40px;
+  padding: 20px 40px;
+}
+
+.gp-container h1 {
+  text-align: center;
+  color: #ea8737;
+  font-weight: 600;
+  margin-bottom: 10px;
+  word-spacing: .2rem;
+}
+
+.gp-container p {
+  color: #ea8737;
+  word-spacing: .2rem;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.breed-type {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.breed {
+  border-radius: 12px;
+  background: #eedcdc;
+  width: 400px;
+  height: 400px;
+  transition: background .35s;
+  cursor: pointer;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-top: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.breed-description {
+  padding: 20px;
+  text-align: center;
+}
+
+.breed-description p {
+  color: #000;
+}
+
+.breed:hover {
+  background: #ea8737;
+  color: white;
+}
+
+/* footere */
+footer {
+  background-color: #3d2919;
+  color: #fff;
+  padding: 40px 40px 0;
+}
+
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-container h3,
+.breed-type-footer h3 {
+  color: #ea8737;
+  margin-bottom: 15px;
+}
+
+.contact-container span {
+  color: #ea8737;
+}
+
+.contact-container ul li,
+.breed-type-footer ul li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #ea8737;
+  font-weight: 600;
+}
+
+#open-menu,
+#close-menu {
+  display: none;
+  transition: .35s;
+}
+
+.open-menu:hover,
+.close-menu:hover {
+  box-shadow: 2px 3px 4px 5px #945e3a;
+}
+
+#next,
+#previous {
+  transition: .35s;
+}
+
+#next:hover,
+#previous:hover {
+  border-radius: 50%;
+  background-color: #ea8737;
+  color: #fff;
+}
+
+/* Media query */
+@media only screen and (max-width:962px) and (min-width:641px) {
+
+  .main-header .open-menu,
+  .main-header .close-menu {
+    font-weight: 800;
+    color: #000;
+    cursor: pointer;
+    transition: .15s;
+    border: none;
+    outline: none;
+  }
+
+  .main-header .close-menu {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+  }
+
+  .main-header #open-menu {
+    display: block;
+    margin-right: 40px;
+  }
+
+  .navbar {
+    display: none;
+    margin-top: 30px;
+    flex: 1;
+  }
+
+  .main-header .navbar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .main-header .navbar ul li {
+    text-align: center;
+  }
+
+  .main-header .navbar ul li a:hover {
+    color: #f4f1f1;
+  }
+
+  .main-header .navbar ul li::after {
+    background: transparent;
+  }
+
+  .logo-container h1 {
+    display: none;
+  }
+
+  .breed-type {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .breed {
+    width: 100%;
+  }
+
+  .main-header {
+    position: fixed;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .logo-container {
+    display: none;
+  }
+
+  .main-header #open-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+
+  .main-header .open-menu,
+  .main-header .close-menu {
+    font-weight: 800;
+    color: #000;
+    cursor: pointer;
+    transition: .15s;
+    border: none;
+    outline: none;
+  }
+
+  .main-header .close-menu {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+  }
+
+  .main-header .navbar {
+    display: none;
+    flex: 1;
+  }
+
+  .main-header .navbar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .main-header .navbar ul li a:hover {
+    color: #f4f1f1;
+  }
+
+  .main-header .navbar ul li::after {
+    background: transparent;
+  }
+
+  .breed-type {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .breed {
+    width: 100%;
+  }
+
+  .contact-us {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-us h3,
+  .copyright {
+    font-size: .9rem;
+  }
+
+  .contact-us li {
+    font-size: .8rem;
+  }
+
+  .breed-type-footer {
+    margin-top: 20px;
+  }
+
+  .main-header {
+    position: fixed;
+  }
+}

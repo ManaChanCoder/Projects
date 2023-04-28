@@ -62,13 +62,11 @@ body {
 
 .dropdown-menu {
   width: 320px;
-  background: rgba(69, 67, 67, 0.7);
+  background: rgba(236, 108, 108, 0.7);
   position: absolute;
   top: 80px;
   right: 80px;
-  height: 0;
   display: none;
-  transition: .15s;
 }
 
 .menu {
@@ -142,4 +140,23 @@ body {
 #close-btn:hover {
   color: #fff;
   font-weight: bold;
+}
+@media screen and (max-width:625px) {
+  .navbar img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .navbar ul li {
+    font-size: 14px;
+  }
+
+  .dropdown-menu {
+    top: 70px;
+    right: 10px;
+  }
 }
